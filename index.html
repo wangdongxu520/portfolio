@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>王东旭 · 视觉设计师作品集</title>
+  <meta name="description" content="王东旭个人作品集" />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <header class="nav" id="nav">
+    <div class="nav__brand">
+      <a class="nav__logo" href="#top">王东旭<span>.</span></a>
+      <span class="nav__contact">手机号：19220892191　邮箱：<a href="mailto:13831279795@163.com">13831279795@163.com</a></span>
+    </div>
+    <nav class="nav__links" id="navLinks">
+      <a class="nav__cv" href="assets/portfolio.pdf" download>作品集 ↓</a>
+      <a class="nav__cv" href="assets/resume.pdf" download>简历 ↓</a>
+    </nav>
+    <button class="nav__toggle" id="navToggle" aria-label="菜单">☰</button>
+  </header>
+
+  <main id="top">
+    <section class="section section--works" id="works">
+      <div class="works__grid">
+        <!-- 卡片一：作品集 PDF -->
+        <a class="tile reveal" id="tilePdf" href="assets/portfolio.pdf" download="王东旭-作品集.pdf">
+          <span class="tile__media tile__media--pdf">
+            <img src="assets/works/pdf-cover.jpg" alt="作品集封面" loading="lazy" />
+          </span>
+          <span class="tile__body">
+            <span class="tile__title">作品集 PDF</span>
+            <span class="tile__meta">开尔文品牌全案 · 盒马联动 · 互动影游 · AI 短剧</span>
+          </span>
+          <span class="tile__badge">下载</span>
+        </a>
+
+        <!-- 卡片二：AIGC 视频 -->
+        <button class="tile reveal" id="tileAigc" type="button">
+          <span class="tile__media">
+            <img src="assets/works/baigujing/poster.jpg" alt="村里来了只白骨精" loading="lazy" />
+            <span class="tile__play">▶</span>
+          </span>
+          <span class="tile__body">
+            <span class="tile__title">AIGC 视频</span>
+            <span class="tile__meta">AI 漫剧 · 角色设定与分镜全流程</span>
+          </span>
+          <span class="tile__badge">查看作品</span>
+        </button>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <p>© <span id="year"></span> 王东旭</p>
+  </footer>
+
+  <!-- AIGC 作品列表面板 -->
+  <div class="works-panel" id="worksPanel" hidden>
+    <div class="works-panel__mask" data-close="1"></div>
+    <div class="works-panel__box" role="dialog" aria-modal="true" aria-label="AIGC 视频作品列表">
+      <button class="works-panel__close" id="worksPanelClose" aria-label="关闭">×</button>
+      <h2 class="works-panel__title">AIGC 视频</h2>
+      <ul class="works-list">
+        <li class="works-item works-item--app">
+          <button class="works-item__btn" type="button" data-link="https://wangdongxu520.github.io/first_wdx/standalone/" data-title="互动影游工作台">
+            <span class="works-item__thumb">
+              <img src="assets/works/interactive/ui.jpg" alt="互动影游工作台" loading="lazy" />
+              <span class="works-item__view">↗</span>
+            </span>
+            <span class="works-item__info">
+              <span class="works-item__name">互动影游工作台</span>
+              <span class="works-item__meta">《痴迷》分支叙事 · 可在线体验</span>
+            </span>
+          </button>
+        </li>
+        <li class="works-item works-item--doc">
+          <button class="works-item__btn" type="button" data-image="assets/works/summary/summary.png" data-title="AIGC 总结">
+            <span class="works-item__thumb">
+              <img src="assets/works/summary/summary.png" alt="AIGC 总结" loading="lazy" />
+              <span class="works-item__view">⤢</span>
+            </span>
+            <span class="works-item__info">
+              <span class="works-item__name">AIGC 总结</span>
+              <span class="works-item__meta">提示词库 · 分镜与导演工具链</span>
+            </span>
+          </button>
+        </li>
+        <li class="works-item works-item--wide">
+          <button class="works-item__btn" type="button" data-video="assets/works/chips/ad.mp4" data-title="薯片 广告练习">
+            <span class="works-item__thumb">
+              <img src="assets/works/chips/poster.jpg" alt="薯片 广告练习" loading="lazy" />
+              <span class="works-item__play">▶</span>
+            </span>
+            <span class="works-item__info">
+              <span class="works-item__name">薯片 广告练习</span>
+              <span class="works-item__meta">AI 广告片 · 横屏 16:9 · 00:27</span>
+            </span>
+          </button>
+        </li>
+        <li class="works-item">
+          <button class="works-item__btn" type="button" data-video="assets/works/whitening/ad.mp4" data-title="美白产品 广告练习">
+            <span class="works-item__thumb">
+              <img src="assets/works/whitening/poster.jpg" alt="美白产品 广告练习" loading="lazy" />
+              <span class="works-item__play">▶</span>
+            </span>
+            <span class="works-item__info">
+              <span class="works-item__name">美白产品 广告练习</span>
+              <span class="works-item__meta">AI 广告片 · 竖屏 9:16 · 00:25</span>
+            </span>
+          </button>
+        </li>
+        <li class="works-item">
+          <button class="works-item__btn" type="button" data-video="assets/works/zhiyang/ad.mp4" data-title="止痒医疗 广告练习">
+            <span class="works-item__thumb">
+              <img src="assets/works/zhiyang/poster.jpg" alt="止痒医疗 广告练习" loading="lazy" />
+              <span class="works-item__play">▶</span>
+            </span>
+            <span class="works-item__info">
+              <span class="works-item__name">止痒医疗 广告练习</span>
+              <span class="works-item__meta">AI 广告片 · 竖屏 9:16 · 00:25</span>
+            </span>
+          </button>
+        </li>
+        <li class="works-item">
+          <button class="works-item__btn" type="button" data-video="assets/works/baigujing/E01.mp4" data-title="村里来了只白骨精 第一集">
+            <span class="works-item__thumb">
+              <img src="assets/works/baigujing/poster.jpg" alt="村里来了只白骨精 第一集" loading="lazy" />
+              <span class="works-item__play">▶</span>
+            </span>
+            <span class="works-item__info">
+              <span class="works-item__name">村里来了只白骨精 第一集</span>
+              <span class="works-item__meta">AI 漫剧 · 竖屏 9:16 · 03:23</span>
+            </span>
+          </button>
+        </li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="lightbox" id="lightbox" hidden>
+    <button class="lightbox__close" id="lightboxClose" aria-label="关闭">×</button>
+    <button class="lightbox__nav lightbox__prev" id="lightboxPrev" aria-label="上一张">‹</button>
+    <img class="lightbox__img" id="lightboxImg" src="" alt="" />
+    <video class="lightbox__video" id="lightboxVideo" controls playsinline hidden></video>
+    <button class="lightbox__nav lightbox__next" id="lightboxNext" aria-label="下一张">›</button>
+    <div class="lightbox__counter" id="lightboxCounter"></div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
